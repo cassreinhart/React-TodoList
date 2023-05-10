@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import axios from 'axios';
 
 const CoffeeBar = () => {
   const [coffee, setCoffee] = useState(null);
@@ -15,9 +16,16 @@ const CoffeeBar = () => {
   return (
     <div>
         <img 
+          src={"https://coffee.alexflipnote.dev/random"}
+          style={{width: '700px'}}
+          alt='coffee'
+        />
+        {/* {below is how I would actually make the request if the url didn't make the request for me} */}
+        {/* <img 
           src={coffee}
           style={{width: '700px'}}
-        />
+          alt='coffee'
+        /> */}
     </div>
   )
 }
